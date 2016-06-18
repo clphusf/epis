@@ -31,7 +31,7 @@ local function do_keyboard_private()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = '🌐 Site', url = 'http://beatbot.ir'},
+    		{text = '🌐 Site', url = 'http://DiMoN.ir'},
     		{text = '📡 Channels', callback_data = '!channel'},
 	    },
 		{
@@ -41,7 +41,7 @@ local function do_keyboard_private()
 	        {text = 'About Us 👥', callback_data = '!aboutus'},
         },
 	    {
-	        {text = '🔸BeatBotTG🔹', callback_data = '!robot'},
+	        {text = '🔸DiMoNteam🔹', callback_data = '!robot'},
         }
     }
     return keyboard
@@ -60,14 +60,14 @@ local function do_keyboard_channel()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = 'Persian Channel 🇮🇷', url = 'https://telegram.me/BeatBot_team'},
+    		{text = 'Persian Channel 🇮🇷', url = 'https://telegram.me/dimon_team'},
 	    },
 	{
-	        		{text = 'English Channel 🇬🇧', url = 'https://telegram.me/BeatBotTeam'},
+	        		{text = 'English Channel 🇬🇧', url = 'https://telegram.me/dimon_team'},
 
     },
 		{
-					{text = 'News Channel 🗣', url = 'https://telegram.me/BeatBot_News'},
+					{text = 'News Channel 🗣', url = 'https://telegram.me/DiMoN_News'},
 		},
 		{
 	    {text = '🔙', callback_data = '!home'},
@@ -82,7 +82,7 @@ local action = function(msg, blocks, ln)
         db:hset('bot:users', msg.from.id, 'xx')
         db:hincrby('bot:general', 'users', 1)
         if msg.chat.type == 'private' then
-            local message = [[📍 *Welcome BeatBotTeam Official Bot*  📍
+            local message = [[📍 *Welcome DiMoN Official Bot*  📍
 -------------------------------------------------------------
 🗣 `Please select an option ...`]]
             local keyboard = do_keyboard_private()
@@ -104,7 +104,7 @@ local action = function(msg, blocks, ln)
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
 end
 if query == 'robot' then
-            local text = [[🔸*BeatBotTG*🔹
+            local text = [[🔸*DiMoNBotTG*🔹
 🚩 _An advanced robot for entertainment group manager and anti-spam_]]
             local keyboard = do_keyboard_robot()
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
@@ -116,14 +116,14 @@ _We will be call to you_]]
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
 end
 if query == 'home' then
-            local text = [[📍 *Welcome BeatBotTeam Official Bot*  📍
+            local text = [[📍 *Welcome DiMoNBotTeam Official Bot*  📍
 -------------------------------------------------------------
 🗣 `Please select an option ...`]]
             local keyboard = do_keyboard_private()
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
 end
         if query == 'share' then
-     api.sendContact(msg.from.id, '+639380063518', '🔸ßελτ ßΘτ🔹 [ Use ! ]')
+     api.sendContact(msg.from.id, '+989216708236', '🔸DiMoN🔹 [ Use ! ]')
 end
     end
 
@@ -132,7 +132,7 @@ end
 return {
 	action = action,
 	triggers = {
-	    '^/(start)@BeatBotTeamBot$',
+	    '^/(start)@DiMoN$',
 	    '^/(start)$',
 	    '^/(help)$',
 	    '^###cb:!(home)',
