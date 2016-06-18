@@ -20,7 +20,7 @@ local function do_keyboard_owners()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = '● AmirHo3inF ●', url = 'http://telegram.me/amirho3inf'},},
+    		{text = '● DiMoN ●', url = 'http://telegram.me/master_dimon'},},
 			{{text = '● FasT ReaCtoR ●', url = 'http://telegram.me/fastreactor'},},
 			{{text = '● NariMan Master ●', url = 'http://telegram.me/Nawr_i_man'},},
 			{{text = '🔙', callback_data = '!aboutus'},
@@ -32,7 +32,7 @@ local function do_keyboard_members()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-			{text = '● Amir SbsS ●' , url = 'telegram.me/amir_h'},
+			{text = '● poker ●' , url = 'telegram.me/masterpoker'},
 			{text = '● Mr Jan123 ●', url = 'telegram.me/i_am_jan123'},
 			},
 			{
